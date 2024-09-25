@@ -1,0 +1,288 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: hwb(221 17% 76%);
+}
+header div.entete, footer{
+  display: flex;
+  color: #9ae1d3;
+  background-color: #000000;
+  filter: drop-shadow(0px 0px 0.5em #9ae1d3);
+}
+header div.entete img{
+  width: 200px;
+  height: 200px;
+  margin: 3px 0 0 3px;
+  filter: drop-shadow(0px 0px 0.5em #9ae1d3);
+}
+header div.entete div.titreEtSoustitre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+header div.entete div.titreEtSoustitre h1{
+  border-bottom: 1px solid #9ae1d3;
+}
+header div.entete div.titreEtSoustitre h1, header div.entete div.titreEtSoustitre h2{
+  text-align: center;
+  margin: 0;
+}
+header div.navBar nav, footer div.navBar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5px 0;
+}
+header div.navBar #imgBurger{
+  display: none;
+}
+header div.navBar .navItem{
+  padding: 5px 1%;
+  text-decoration: none;
+  color: #caf6ae;
+  font-size: 1.3em;
+  filter: drop-shadow(0px 0px 0.5em #caf6ae);
+}
+header div.navBar a:hover{
+  border-bottom: 1px solid #caf6ae;
+  filter: none;
+}
+header div.navBar div.separateur, footer div.navBar div.separateur{
+  border-right: 1px solid #caf6ae;
+}
+footer{
+  flex-wrap: wrap;
+}
+footer div.navBar{
+  margin: auto;
+  padding: 10px;
+}
+footer p.cssValidated{
+  width: 100%;
+  text-align: center;
+}
+footer p.cssValidated a img{
+  width: 7%;
+}
+a.boutonHaut{
+  position: sticky;
+  top: 90%;
+  left: 95%;
+  z-index: 2;
+  padding: 10px 17px;
+  text-decoration: none;
+  color: #9ae1d3;
+  background-color: transparent;
+  font-size: 1.5em;
+  border: 1px solid #9ae1d3;
+  border-radius: 50%;
+}
+a.boutonHaut:hover{
+  color: #2c313c;
+  background-color: #9ae1d3;
+  border: 1px solid #9ae1d3;
+}
+div.container{
+  width: 75%;
+  margin: auto;
+  z-index: 2;
+}
+div.carrousel{
+  display: flex;
+  width: 100%;
+  margin: 25px auto;
+  justify-content: space-around;
+}
+ion-icon {
+  font-size: 3em;
+}
+div.sliderContainer{
+  overflow: hidden;
+}
+div.sliderContainer h2{
+  color: #caf6ae;
+}
+div.slider{
+  position: relative;
+}
+div.sliderInterne{
+  display: flex;
+  overflow: hidden;
+  height: 500px;
+  flex-wrap: nowrap;
+  border: 2px solid #9ae1d3;
+}
+div.slide{
+  flex: 0 0 100%;
+  height: 100%;
+  transition: .10s ease-in-out;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sliderNav {
+  position: absolute;
+  z-index: 5;
+  left: 1%;
+  right: 1%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.sliderNav button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  color: #2C313C;
+  background-color: transparent;
+}
+.sliderNav button:hover{
+  color: #9ae1d3;
+}
+div.sliderNav ion-icon{
+  font-size: 3em;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+.slider .dots .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.slider .dots .dot.active {
+  background-color: #caf6ae;
+}
+div.liensSousSlide{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+div.liensSousSlide a{
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #000000;
+}
+div.liensSousSlide a.activeLink{
+  background-color: #caf6ae;
+}
+div.liensSousSlide a:hover{
+  border-bottom: 2px solid #caf6ae;
+  padding-bottom: 8px;
+}
+div.liensSousSlide a.activeLink:hover{
+  border-bottom: 2px solid #9ae1d3;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 1450px){
+  header div.navBar .navItem{
+    font-size: 1em;
+  }
+  footer div.navBar p.navItem{
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1450px){
+  div.sliderInterne{
+    height: 40vh;
+  }
+  div.liensSousSlide a{
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1000px){
+  header div.navBar{
+    display: block;
+    width: fit-content;
+  }
+  header div.navBar nav{
+    display: none;
+  }
+  header div.navBar #imgBurger{
+    display: block;
+  }
+  header div.navBar:hover nav{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: 0;
+    z-index: 1;
+  }
+  header div.navBar nav a.navItem{
+    width: 100%;
+    margin: 5px 0;
+    background-color: #2c363f;
+    filter: drop-shadow(0px 0px 0.5em #caf6ae);
+  }
+  a.boutonHaut{
+    top: 90%;
+    left: 90%;
+  }
+  div.sliderInterne{
+    height: 30vh;
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  div.liensSousSlide{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  div.liensSousSlide a{
+    text-align: center;
+    font-weight: normal;
+    margin: 1px;
+    padding: 5px 0;
+  }
+  footer div.navBar{
+    display: block
+  }
+  footer div.navBar p.navItem{
+    font-size: 1em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px){
+  a.boutonHaut{
+    top: 85%;
+    left: 85%;
+  }
+  .container{
+    width: 65% !important;
+  }
+  div.sliderInterne{
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 400px){
+  header div.entete{
+    display: flex;
+    flex-direction: column;
+  }
+  header div.entete img{
+    width: 200px;
+    margin: 0 auto;
+  }
+}
